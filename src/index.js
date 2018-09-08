@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Component from './Component';
+import Button from './App';
+import Webcam from './Webcam';
+import Images from './Images';
+
+// import Images from './Images';
 
 window.onload = () => {
+
   ReactDOM.render(
-    <Component />,
+    <div>
+      <Button />
+      <Webcam />
+      <Images />
+     </div>,
     document.querySelector('#container')
   );
 };
