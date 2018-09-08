@@ -10,10 +10,10 @@ import SearchApp from './Fetch';
 window.onload = () => {
 
   ReactDOM.render(
-    <div>
+    <div style={{padding: "20px"}}>
       <Button />
-      <Webcam />
       <Images />
+      <Webcam />
       <SearchApp />
      </div>,
     document.querySelector('#container')

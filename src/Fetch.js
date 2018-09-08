@@ -1,6 +1,9 @@
 import React from 'react';
+import "./style.css"
 //import imgBase from './Images';
 //import imgYou from './Webcam';
+
+let scores = [];
 
 class SearchApp extends React.Component {
 
@@ -13,6 +16,10 @@ class SearchApp extends React.Component {
   }
 
   handleClick() {
+    const score = Math.random();
+    //scores.add(score);
+    console.log(score);
+    this.setState({ score });
     let data = new FormData();
     const img1 = {
         uri: element, name: 'image.jpg', type: 'image/jpg'
@@ -35,10 +42,10 @@ class SearchApp extends React.Component {
 
   render() {
     return (
-      <div className="app-container">
-        <h3>Get your score!</h3>
+      <div className="app-container" background-color="orange">
+        <h3>Accomplish 3: Get your score!</h3>
          <button onClick={this.handleClick}>Get Score</button>
-        <h2>{this.state.score}</h2>
+        <h2>Score: {this.state.score}</h2>
       </div>
     )
   }

@@ -15,7 +15,7 @@ class WebcamCapture extends React.Component {
 
   handleClick() {
         const screenshot = this.webcam.getScreenshot();
-        console.log(screenshot);
+        //console.log(screenshot);
         imgYou = screenshot;
         this.setState({ screenshot });
       }
@@ -23,12 +23,12 @@ class WebcamCapture extends React.Component {
       render() {
         return (
           <div>
-            <h1>Copy the facial expression!</h1>
+            <h1>Objective: Copy the facial expression!</h1>
             <Webcam
               audio={false}
               ref={node => (this.webcam = node)}
             />
-              <h2>Capture your expression</h2>
+              <h2>Accomplish 2: Capture your expression</h2>
               <div className='screenshots'>
                 <div className='controls'>
                   <button onClick={this.handleClick}>Capture</button>

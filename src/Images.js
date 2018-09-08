@@ -40,10 +40,10 @@ class Images extends React.Component {
       render() {
         return (
           <div>
-              <h2>Images to Copy</h2>
+              <h2>Accomplish 1: Images to Copy</h2>
               <div className='screenshots'>
                 <div className='controls'>
-                  <button onClick={this.handleClick}>next picture</button>
+                  <button onClick={this.handleClick}>NEXT PICTURE</button>
                 </div>
                 {this.state.screenshot}
             </div>
