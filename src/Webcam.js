@@ -28,7 +28,7 @@ class WebcamCapture extends React.Component {
               audio={false}
               ref={node => (this.webcam = node)}
             />
-              <h2>Screenshots</h2>
+              <h2>Capture your expression</h2>
               <div className='screenshots'>
                 <div className='controls'>
                   <button onClick={this.handleClick}>Capture</button>

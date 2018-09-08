@@ -36,7 +36,7 @@ class SearchApp extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <h3>React fetch example</h3>
+        <h3>Get your score!</h3>
          <button onClick={this.handleClick}>Get Score</button>
         <h2>{this.state.score}</h2>
       </div>

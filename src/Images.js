@@ -40,7 +40,7 @@ class Images extends React.Component {
       render() {
         return (
           <div>
-              <h2>Compare Images</h2>
+              <h2>Images to Copy</h2>
               <div className='screenshots'>
                 <div className='controls'>
                   <button onClick={this.handleClick}>next picture</button>
