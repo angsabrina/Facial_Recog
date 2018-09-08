@@ -74,7 +74,8 @@ var config = {
       {
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=25000'
-      }
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
   resolve: {

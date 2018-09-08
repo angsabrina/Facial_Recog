@@ -1,4 +1,5 @@
 import React from 'react';
+
 // import sab_1 from '/mnt/c/Users/angsa/THD_Hack/react_app/react-webpack-starter/public/sab_1.jpg';
 // import sab_2 from '/mnt/c/Users/angsa/THD_Hack/react_app/react-webpack-starter/public/sab_2.jpg';
 // import sab_3 from '/mnt/c/Users/angsa/THD_Hack/react_app/react-webpack-starter/public/sab_3.jpg';
@@ -15,6 +16,7 @@ let pictures = [
 let emotes = ['happy', 'fear', 'disgust', 'angry', 'sad', 'surprised', 'neutral'];
 // let array = [sab_1, sab_2, sab_3];
 let index = 0;
+let imgBase = null;
 
 class Images extends React.Component {
   constructor(props) {
@@ -29,7 +31,9 @@ class Images extends React.Component {
   handleClick() {
         let image = pictures[(index++)%pictures.length];
         console.log(index);
+        imgBase = image;
         const screenshot = <img key={image} src={image}/>;
+
         this.setState({ screenshot });
   }
 
@@ -49,3 +53,4 @@ class Images extends React.Component {
     }
 
 export default Images;
+//export imgBase;

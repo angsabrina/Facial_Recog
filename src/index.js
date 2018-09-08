@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Button from './App';
 import Webcam from './Webcam';
 import Images from './Images';
+import SearchApp from './Fetch';
 
 // import Images from './Images';
 
@@ -13,6 +14,7 @@ window.onload = () => {
       <Button />
       <Webcam />
       <Images />
+      <SearchApp />
      </div>,
     document.querySelector('#container')
   );

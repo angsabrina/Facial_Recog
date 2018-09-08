@@ -1,6 +1,8 @@
 import React from 'react';
 import Webcam from 'react-webcam';
 
+let imgYou = null;
+
 class WebcamCapture extends React.Component {
   constructor(props) {
     super(props);
@@ -13,13 +15,15 @@ class WebcamCapture extends React.Component {
 
   handleClick() {
         const screenshot = this.webcam.getScreenshot();
+        console.log(screenshot);
+        imgYou = screenshot;
         this.setState({ screenshot });
       }
 
       render() {
         return (
           <div>
-            <h1>react-webcam</h1>
+            <h1>Copy the facial expression!</h1>
             <Webcam
               audio={false}
               ref={node => (this.webcam = node)}
@@ -27,7 +31,7 @@ class WebcamCapture extends React.Component {
               <h2>Screenshots</h2>
               <div className='screenshots'>
                 <div className='controls'>
-                  <button onClick={this.handleClick}>capture</button>
+                  <button onClick={this.handleClick}>Capture</button>
                 </div>
                 {this.state.screenshot ? <img src={this.state.screenshot} /> : null}
             </div>
@@ -37,3 +41,5 @@ class WebcamCapture extends React.Component {
     }
 
 export default WebcamCapture;
+
+//export imgYou;
